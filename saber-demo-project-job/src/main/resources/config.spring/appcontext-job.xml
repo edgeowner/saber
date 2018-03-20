@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+	<bean id="scheduler"
+		  class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<!--<ref bean="syncTerminateStartTrigger"/>-->
+				<!--<ref bean="syncHistoryDataStartTrigger"/>-->
+				<!--<ref bean="syncSurveyDataStartTrigger"/>-->
+				<ref bean="demoJobTrigger"/>
+			</list>
+		</property>
+		<property name="schedulerContextAsMap">
+			<map>
+				<entry key="timeout" value="3000" />
+			</map>
+		</property>
+	</bean>
+
+	<bean id="demoJobDetal" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+		<property name="jobClass" value="com.demo.saber.job.DemoJob"/>
+		<property name="applicationContextJobDataKey" value="applicationContext" />
+		<property name="durability" value="true" />
+	</bean>
+
+	<bean id="demoJobTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="demoJobDetal" />
+		<property name="cronExpression" value="0 */1 * * * ?" />
+		<!--<property name="cronExpression" value="0 30 17 * * ?" />-->
+	</bean>
+</beans>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+
+    <classPathEntry
+            location="/Users/zhangsunny/.m2/repository/mysql/mysql-connector-java/5.1.38/mysql-connector-java-5.1.38.jar"/>
+    <context id="tables" targetRuntime="MyBatis3">
+
+        <commentGenerator>
+            <property name="suppressDate" value="true"/>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/root_test"
+                        userId="root"
+                        password="root">
+        </jdbcConnection>
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="true"/>
+        </javaTypeResolver>
+        <javaModelGenerator targetPackage="com.demo.saber.infrastructure.po"
+                            targetProject="${dao.target.dir}">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+        <sqlMapGenerator targetPackage="com.demo.saber.infrastructure.dao"
+                         targetProject="${mapper.target.dir}">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <javaClientGenerator targetPackage="com.demo.saber.infrastructure.mapper"
+                             targetProject="${model.target.dir}"
+                             type="XMLMAPPER">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+        <table tableName="user">
+        <columnOverride column="id" property="id"/>
+        <columnOverride column="login_name" property="loginName"/>
+        <columnOverride column="login_code" property="loginCode"/>
+        </table>
+        <table tableName="user_count">
+            <columnOverride column="id" property="id"/>
+            <columnOverride column="user_count" property="userCount"/>
+            <columnOverride column="count_time" property="countTime"/>
+            <columnOverride column="add_time" property="addTime"/>
+            <columnOverride column="update_time" property="updateTime"/>
+        </table>
+
+
+    </context>
+</generatorConfiguration>

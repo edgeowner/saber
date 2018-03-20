@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+        <!-- 配置日志输出文件名字 追加读写 -->
+        <RollingFile name="ERROR" fileName="logs/error.log"
+                     filePattern="log/$${date:yy-mm}/error-%d{mm-dd-yyyy}-%i.log.gz">
+            <ThresholdFilter level="error" onMatch="ACCEPT" onMismatch="DENY"/>
+            <!-- 输出格式 -->
+            <PatternLayout
+                    pattern="%d{yyyy-MM-dd 'at' HH:mm:ss z} %-5level %class{36} 'Line-' %L %M - %msg%xEx%n" />
+            <SizeBasedTriggeringPolicy size="10MB" />
+        </RollingFile>
+        <RollingFile name="INFO" fileName="logs/info.log"
+                     filePattern="log/$${date:yy-mm}/info-%d{mm-dd-yyyy}-%i.log.gz">
+            <ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY"/>
+            <!-- 输出格式 -->
+            <PatternLayout
+                    pattern="%d{yyyy-MM-dd 'at' HH:mm:ss z} %-5level %class{36} 'Line-' %L %M - %msg%xEx%n" />
+            <SizeBasedTriggeringPolicy size="50MB" />
+        </RollingFile>
+
+        <!-- 输出到控制台的配置 -->
+        <!--<Console name="STDOUT" target="SYSTEM_OUT">-->
+            <!--&lt;!&ndash; 输出格式 &ndash;&gt;-->
+            <!--<PatternLayout pattern="%d %-5p [%t] %C{2} (%F:%L) - %m%n" />-->
+        <!--</Console>-->
+    </Appenders>
+    <Loggers>
+        <!-- 记录器输出文件为info级别 -->
+        <!-- <logger name="com.hdd" level="debug" additivity="false"> <AppenderRef
+            ref="STDOUT"/> </logger> 记录器输出文件为info级别 <logger name="com.hdd.test.App2"
+            level="info" additivity="false"> <AppenderRef ref="A1"/> </logger> -->
+        <!-- 根 控制台输出级别 -->
+        <!--<Logger name="java.sql" level="debug" additivity="true">-->
+            <!--<AppenderRef ref="Console"/>-->
+        <!--</Logger>-->
+        <Logger name="com.demo.saber" level="trace" additivity="false">
+            <AppenderRef ref="Console"/>
+        </Logger>
+        <Root level="trace">
+            <AppenderRef ref="ERROR" />
+            <AppenderRef ref="INFO" />
+            <!--<AppenderRef ref="STDOUT" />-->
+        </Root>
+
+    </Loggers>
+</Configuration>

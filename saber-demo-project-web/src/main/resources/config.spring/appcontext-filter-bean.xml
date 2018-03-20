@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                         http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+                         http://www.springframework.org/schema/context
+                         http://www.springframework.org/schema/context/spring-context.xsd
+                         http://www.springframework.org/schema/mvc
+                         http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+
+    <!-- mtFilter -->
+    <!--<bean id="mtFilter" class="com.sankuai.meituan.auth.spring.FilterFactoryBean">-->
+        <!--&lt;!&ndash; 需要接入应用实现该url，推荐unauthorized页面上显示联系人 &ndash;&gt;-->
+        <!--<property name="unauthorizedUrl" value="/unauthorized"/>-->
+        <!--<property name="clientId" value="${ba-es-evaluation.clientId}"/>-->
+        <!--<property name="secret" value="${ba-es-evaluation.secret}"/>-->
+        <!--<property name="ssoUrl" value="${ba-es-evaluation.ssoUrl}"/>-->
+        <!--<property name="ssoApiUrl" value="${ba-es-evaluation.ssoApiUrl}"/>-->
+        <!--<property name="upmApiUrl" value="${ba-es-evaluation.upmApiUrl}"/>-->
+        <!--<property name="filterChainDefinitions">-->
+            <!--<value>-->
+                <!--/heartbeat = anon-->
+                <!--/review/openapi/** = anon-->
+                <!--/performance/openapi/** = anon-->
+                <!--/performance/openapi/tenant/initial = anon-->
+                <!--/admin/** = user-->
+                <!--/review/api/** = user-->
+                <!--/{review}/api/** = user-->
+                <!--/{performance}/api/** = user-->
+                <!--/performance/api/** = user-->
+                <!--/static/** = anon-->
+                <!--/pages/** = anon-->
+                <!--/favicon.ico = anon-->
+                <!--/unauthorized = anon-->
+                <!--/lion/**=anon-->
+                <!--/swagger-ui.html = user-->
+                <!--&lt;!&ndash;/** = user&ndash;&gt;-->
+            <!--</value>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+</beans>
