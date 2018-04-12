@@ -47,4 +47,8 @@ public class ConcurrencyControlTest extends BaseTest {
             priceMapper.insertSelective(price);
         }
     }
+
+
+
+
 }

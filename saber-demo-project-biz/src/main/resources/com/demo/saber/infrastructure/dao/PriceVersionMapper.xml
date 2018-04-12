@@ -250,6 +250,27 @@
         set front = #{front, jdbcType=DECIMAL},
             version = version + 1
         where id = #{id, jdbcType=INTEGER}
-        and version = ${version, jdbcType=INTEGER}
+        and version = #{version, jdbcType=INTEGER}
     </update>
+
+    <insert id="batchInsertPriceVersions" useGeneratedKeys="true" keyProperty="id" parameterType="com.demo.saber.infrastructure.po.PriceVersion">
+        insert into `price_version` (
+         add_time,
+         update_time,
+         total,
+         front,
+         end,
+         version
+        ) values
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            now(),
+            now(),
+            #{item.total,jdbcType=DECIMAL},
+            #{item.front,jdbcType=DECIMAL},
+            #{item.end,jdbcType=DECIMAL},
+            #{item.version,jdbcType=INTEGER}
+          )
+        </foreach>
+    </insert>
 </mapper>
