@@ -36,10 +36,10 @@ public class PriceController {
 
 
     /**
-     * 多线程并发执行Demo
+     * 多线程并发执行Demo ,无锁场景下的更新
      *
      * @param priceVO
-     * @return
+     * @return message
      */
     @RequestMapping(value = "/update", method = RequestMethod.POST)
     public ResponseEntity<Map<String, Object>> updatePrice(@RequestBody PriceVO priceVO) {
@@ -68,8 +68,8 @@ public class PriceController {
     }
 
 
-    private void toUpdatePrice( int count){
-        log.info(MessageFormat.format("thread create start:{0} ",count));
+    private void toUpdatePrice(int count) {
+        log.info(MessageFormat.format("thread create start:{0} ", count));
         Price price = priceMapper.selectByPrimaryKey(1);
         int ron = 10;
         price.setFront(price.getFront().subtract(new BigDecimal(ron)));
@@ -77,6 +77,6 @@ public class PriceController {
         priceMapper.updateByPrimaryKey(price);
         price.setId(null);
         priceMapper.insertSelective(price);
-        log.info(MessageFormat.format("thread create end:{0} ",count));
+        log.info(MessageFormat.format("thread create end:{0} ", count));
     }
 }

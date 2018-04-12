@@ -50,8 +50,8 @@
         <logger name="org.springframework" level="INFO"></logger>
         <!--调整level级别可以查看到SQL参数-->
 
-
-        <Root level="DEBUG">
+        <!--可以修改日志级别DEBUG-->
+        <Root level="INFO">
             <AppenderRef ref="Console"/>
             <AppenderRef ref="InfoFile"/>
             <AppenderRef ref="WarnFile"/>
