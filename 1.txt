@@ -1,0 +1,190 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.demo.saber.project:saber-demo-project-biz:jar:1.0-SNAPSHOT
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.google.guava:guava:jar -> duplicate declaration of version ${guava.version} @ line 195, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] saber-demo-project
+[INFO] saber-demo-project-biz
+[INFO] saber-demo-project-web Maven Webapp
+[INFO] saber-demo-project-job
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building saber-demo-project 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ saber-demo-project ---
+[INFO] com.demo.saber.project:saber-demo-project:pom:1.0-SNAPSHOT
+[INFO] +- org.springframework:spring-core:jar:4.2.6.RELEASE:compile
+[INFO] |  \- commons-logging:commons-logging:jar:1.2:compile
+[INFO] +- org.springframework:spring-web:jar:4.2.6.RELEASE:compile
+[INFO] |  +- org.springframework:spring-beans:jar:4.2.6.RELEASE:compile
+[INFO] |  \- org.springframework:spring-context:jar:4.2.6.RELEASE:compile
+[INFO] +- org.springframework:spring-oxm:jar:4.2.6.RELEASE:compile
+[INFO] +- org.springframework:spring-tx:jar:4.2.6.RELEASE:compile
+[INFO] +- org.springframework:spring-jdbc:jar:4.2.6.RELEASE:compile
+[INFO] +- org.springframework:spring-webmvc:jar:4.2.6.RELEASE:compile
+[INFO] |  \- org.springframework:spring-expression:jar:4.2.6.RELEASE:compile
+[INFO] +- org.springframework:spring-aop:jar:4.2.6.RELEASE:compile
+[INFO] +- org.springframework:spring-context-support:jar:4.2.6.RELEASE:compile
+[INFO] +- org.springframework:spring-test:jar:4.2.6.RELEASE:compile
+[INFO] +- org.mybatis:mybatis:jar:3.4.0:compile
+[INFO] +- org.mybatis:mybatis-spring:jar:1.3.1:compile
+[INFO] +- mysql:mysql-connector-java:jar:5.1.30:compile
+[INFO] +- com.alibaba:fastjson:jar:1.1.41:compile
+[INFO] +- log4j:log4j:jar:1.2.17:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.7.7:compile
+[INFO] +- org.slf4j:slf4j-log4j12:jar:1.7.7:compile
+[INFO] +- org.projectlombok:lombok:jar:1.12.2:compile
+[INFO] +- org.apache.httpcomponents:httpclient:jar:4.3.6:compile
+[INFO] |  \- org.apache.httpcomponents:httpcore:jar:4.3.3:compile
+[INFO] +- org.apache.logging.log4j:log4j-web:jar:2.8:compile
+[INFO] +- org.apache.logging.log4j:log4j-api:jar:2.8:compile
+[INFO] +- org.apache.logging.log4j:log4j-core:jar:2.8:compile
+[INFO] +- commons-fileupload:commons-fileupload:jar:1.3.2:compile
+[INFO] +- commons-io:commons-io:jar:2.5:compile
+[INFO] +- commons-codec:commons-codec:jar:1.9:compile
+[INFO] +- commons-lang:commons-lang:jar:2.6:compile
+[INFO] +- commons-dbcp:commons-dbcp:jar:1.4:compile
+[INFO] |  \- commons-pool:commons-pool:jar:1.5.4:compile
+[INFO] +- net.sf.ehcache:ehcache-core:jar:2.6.10:compile
+[INFO] +- com.github.pagehelper:pagehelper:jar:4.2.0:compile
+[INFO] |  \- com.github.jsqlparser:jsqlparser:jar:0.9.5:compile
+[INFO] +- com.google.guava:guava:jar:18.0:compile
+[INFO] +- org.apache.shiro:shiro-core:jar:1.2.4:compile
+[INFO] |  \- commons-beanutils:commons-beanutils:jar:1.8.3:compile
+[INFO] +- org.apache.shiro:shiro-ehcache:jar:1.2.4:compile
+[INFO] +- org.apache.shiro:shiro-web:jar:1.2.4:compile
+[INFO] +- org.apache.shiro:shiro-spring:jar:1.2.4:compile
+[INFO] +- javax.servlet:javax.servlet-api:jar:3.1.0:compile
+[INFO] +- javax.servlet.jsp:javax.servlet.jsp-api:jar:2.3.1:provided
+[INFO] +- org.hibernate:hibernate-validator:jar:5.1.3.Final:compile
+[INFO] |  +- javax.validation:validation-api:jar:1.1.0.Final:compile
+[INFO] |  \- org.jboss.logging:jboss-logging:jar:3.1.3.GA:compile
+[INFO] +- org.quartz-scheduler:quartz:jar:2.2.2:compile
+[INFO] \- org.quartz-scheduler:quartz-jobs:jar:2.2.2:compile
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building saber-demo-project-biz 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ saber-demo-project-biz ---
+[INFO] com.demo.saber.project:saber-demo-project-biz:jar:1.0-SNAPSHOT
+[INFO] +- org.springframework:spring-core:jar:4.2.6.RELEASE:compile
+[INFO] |  \- commons-logging:commons-logging:jar:1.2:compile
+[INFO] +- org.springframework:spring-beans:jar:4.2.6.RELEASE:compile
+[INFO] +- org.springframework:spring-context:jar:4.2.6.RELEASE:compile
+[INFO] |  \- org.springframework:spring-expression:jar:4.2.6.RELEASE:compile
+[INFO] +- org.springframework:spring-context-support:jar:4.2.6.RELEASE:compile
+[INFO] +- org.springframework:spring-aop:jar:4.2.6.RELEASE:compile
+[INFO] |  \- aopalliance:aopalliance:jar:1.0:compile
+[INFO] +- org.springframework:spring-web:jar:4.2.6.RELEASE:compile
+[INFO] +- org.springframework:spring-webmvc:jar:4.2.6.RELEASE:compile
+[INFO] +- org.springframework:spring-jdbc:jar:4.2.6.RELEASE:compile
+[INFO] +- org.springframework:spring-orm:jar:4.2.6.RELEASE:compile
+[INFO] +- org.mybatis:mybatis:jar:3.4.0:compile
+[INFO] +- org.mybatis:mybatis-spring:jar:1.3.1:compile
+[INFO] +- com.github.pagehelper:pagehelper:jar:4.2.0:compile
+[INFO] |  \- com.github.jsqlparser:jsqlparser:jar:0.9.5:compile
+[INFO] +- mysql:mysql-connector-java:jar:5.1.30:compile
+[INFO] +- c3p0:c3p0:jar:0.9.1.2:compile
+[INFO] +- org.aspectj:aspectjrt:jar:1.8.9:compile
+[INFO] +- cglib:cglib-nodep:jar:3.1:compile
+[INFO] +- org.springframework:spring-test:jar:4.2.6.RELEASE:test
+[INFO] +- junit:junit:jar:4.12:test
+[INFO] |  \- org.hamcrest:hamcrest-core:jar:1.3:test
+[INFO] +- com.fasterxml.jackson.core:jackson-annotations:jar:2.8.4:compile
+[INFO] +- com.fasterxml.jackson.core:jackson-databind:jar:2.8.4:compile
+[INFO] +- com.fasterxml.jackson.core:jackson-core:jar:2.8.4:compile
+[INFO] +- commons-lang:commons-lang:jar:2.6:compile
+[INFO] +- commons-codec:commons-codec:jar:1.9:compile
+[INFO] +- org.apache.poi:poi:jar:3.15:compile
+[INFO] |  \- org.apache.commons:commons-collections4:jar:4.1:compile
+[INFO] +- org.apache.poi:poi-ooxml:jar:3.15:compile
+[INFO] |  +- org.apache.poi:poi-ooxml-schemas:jar:3.15:compile
+[INFO] |  |  \- org.apache.xmlbeans:xmlbeans:jar:2.6.0:compile
+[INFO] |  |     \- stax:stax-api:jar:1.0.1:compile
+[INFO] |  \- com.github.virtuald:curvesapi:jar:1.04:compile
+[INFO] +- com.google.guava:guava:jar:18.0:compile
+[INFO] +- com.google.code.gson:gson:jar:2.8.1:compile
+[INFO] +- io.springfox:springfox-swagger2:jar:2.6.1:compile
+[INFO] |  +- io.swagger:swagger-annotations:jar:1.5.10:compile
+[INFO] |  +- io.swagger:swagger-models:jar:1.5.10:compile
+[INFO] |  +- io.springfox:springfox-spi:jar:2.6.1:compile
+[INFO] |  |  \- io.springfox:springfox-core:jar:2.6.1:compile
+[INFO] |  +- io.springfox:springfox-schema:jar:2.6.1:compile
+[INFO] |  +- io.springfox:springfox-swagger-common:jar:2.6.1:compile
+[INFO] |  +- io.springfox:springfox-spring-web:jar:2.6.1:compile
+[INFO] |  +- org.springframework.plugin:spring-plugin-core:jar:1.2.0.RELEASE:compile
+[INFO] |  +- org.springframework.plugin:spring-plugin-metadata:jar:1.2.0.RELEASE:compile
+[INFO] |  \- org.mapstruct:mapstruct:jar:1.0.0.Final:compile
+[INFO] +- com.fasterxml:classmate:jar:1.3.3:compile
+[INFO] +- io.springfox:springfox-swagger-ui:jar:2.6.1:compile
+[INFO] +- org.apache.logging.log4j:log4j-api:jar:2.8:compile
+[INFO] +- org.apache.logging.log4j:log4j-core:jar:2.8:compile
+[INFO] +- org.apache.logging.log4j:log4j-slf4j-impl:jar:2.8:runtime
+[INFO] +- org.springframework:spring-oxm:jar:4.2.6.RELEASE:compile
+[INFO] +- org.springframework:spring-tx:jar:4.2.6.RELEASE:compile
+[INFO] +- com.alibaba:fastjson:jar:1.1.41:compile
+[INFO] +- log4j:log4j:jar:1.2.17:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.7.7:compile
+[INFO] +- org.slf4j:slf4j-log4j12:jar:1.7.7:compile
+[INFO] +- org.projectlombok:lombok:jar:1.12.2:compile
+[INFO] +- org.apache.httpcomponents:httpclient:jar:4.3.6:compile
+[INFO] |  \- org.apache.httpcomponents:httpcore:jar:4.3.3:compile
+[INFO] +- org.apache.logging.log4j:log4j-web:jar:2.8:compile
+[INFO] +- commons-fileupload:commons-fileupload:jar:1.3.2:compile
+[INFO] +- commons-io:commons-io:jar:2.5:compile
+[INFO] +- commons-dbcp:commons-dbcp:jar:1.4:compile
+[INFO] |  \- commons-pool:commons-pool:jar:1.5.4:compile
+[INFO] +- net.sf.ehcache:ehcache-core:jar:2.6.10:compile
+[INFO] +- org.apache.shiro:shiro-core:jar:1.2.4:compile
+[INFO] |  \- commons-beanutils:commons-beanutils:jar:1.8.3:compile
+[INFO] +- org.apache.shiro:shiro-ehcache:jar:1.2.4:compile
+[INFO] +- org.apache.shiro:shiro-web:jar:1.2.4:compile
+[INFO] +- org.apache.shiro:shiro-spring:jar:1.2.4:compile
+[INFO] +- javax.servlet:javax.servlet-api:jar:3.1.0:compile
+[INFO] +- javax.servlet.jsp:javax.servlet.jsp-api:jar:2.3.1:provided
+[INFO] +- org.hibernate:hibernate-validator:jar:5.1.3.Final:compile
+[INFO] |  +- javax.validation:validation-api:jar:1.1.0.Final:compile
+[INFO] |  \- org.jboss.logging:jboss-logging:jar:3.1.3.GA:compile
+[INFO] +- org.quartz-scheduler:quartz:jar:2.2.2:compile
+[INFO] \- org.quartz-scheduler:quartz-jobs:jar:2.2.2:compile
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building saber-demo-project-web Maven Webapp 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+Downloading: http://pixel.sankuai.com/repository/mtdp/com/demo/saber/project/saber-demo-project-biz/1.0-SNAPSHOT/maven-metadata.xml
+[WARNING] Could not transfer metadata com.demo.saber.project:saber-demo-project-biz:1.0-SNAPSHOT/maven-metadata.xml from/to meituan-dianping (http://pixel.sankuai.com/repository/mtdp): pixel.sankuai.com: unknown error
+[WARNING] Failure to transfer com.demo.saber.project:saber-demo-project-biz:1.0-SNAPSHOT/maven-metadata.xml from http://pixel.sankuai.com/repository/mtdp was cached in the local repository, resolution will not be reattempted until the update interval of meituan-dianping has elapsed or updates are forced. Original error: Could not transfer metadata com.demo.saber.project:saber-demo-project-biz:1.0-SNAPSHOT/maven-metadata.xml from/to meituan-dianping (http://pixel.sankuai.com/repository/mtdp): pixel.sankuai.com: unknown error
+Downloading: http://pixel.sankuai.com/repository/mtdp/com/demo/saber/project/saber-demo-project-biz/1.0-SNAPSHOT/saber-demo-project-biz-1.0-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] saber-demo-project ................................. SUCCESS [  1.076 s]
+[INFO] saber-demo-project-biz ............................. SUCCESS [  0.200 s]
+[INFO] saber-demo-project-web Maven Webapp ................ FAILURE [  0.487 s]
+[INFO] saber-demo-project-job ............................. SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 2.030 s
+[INFO] Finished at: 2018-04-09T19:46:01+08:00
+[INFO] Final Memory: 18M/304M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project saber-demo-project-web: Could not resolve dependencies for project com.demo.saber.project:saber-demo-project-web:war:1.0-SNAPSHOT: Could not transfer artifact com.demo.saber.project:saber-demo-project-biz:jar:1.0-SNAPSHOT from/to meituan-dianping (http://pixel.sankuai.com/repository/mtdp): pixel.sankuai.com: Unknown host pixel.sankuai.com -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <goals> -rf :saber-demo-project-web

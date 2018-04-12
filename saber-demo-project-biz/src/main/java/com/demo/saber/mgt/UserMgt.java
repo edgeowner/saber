@@ -10,5 +10,7 @@ import java.util.List;
  * Created by zhangsunny on 2017/9/30.
  */
 public interface UserMgt {
+
     List<UserDto> getUserList();
+
 }

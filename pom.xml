@@ -14,14 +14,16 @@
         <module>saber-demo-project-job</module>
     </modules>
 
+
+
     <properties>
         <junit.version>4.12</junit.version>
         <!-- spring版本号 -->
         <spring.version>4.2.6.RELEASE</spring.version>
         <!--<spring-aspect.version>4.2.2.RELEASE</spring-aspect.version>-->
         <!-- mybatis版本号 -->
-        <mybatis.version>3.2.6</mybatis.version>
-        <mybatis-spring.version>1.2.2</mybatis-spring.version>
+        <mybatis.version>3.4.0</mybatis.version>
+        <mybatis-spring.version>1.3.1</mybatis-spring.version>
         <mysql-connector.version>5.1.30</mysql-connector.version>
         <c3p0-version>0.9.1.2</c3p0-version>
         <cglib-nodep-version>3.1</cglib-nodep-version>

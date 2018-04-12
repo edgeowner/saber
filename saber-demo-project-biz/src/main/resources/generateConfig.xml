@@ -5,6 +5,7 @@
 
 <generatorConfiguration>
 
+    <!--进入mybatis配置所在模块 ，重新配置table标签内容，执行 mybatis-generator:generate-->
     <classPathEntry
             location="/Users/zhangsunny/.m2/repository/mysql/mysql-connector-java/5.1.38/mysql-connector-java-5.1.38.jar"/>
     <context id="tables" targetRuntime="MyBatis3">
@@ -37,17 +38,27 @@
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 
-        <table tableName="user">
-        <columnOverride column="id" property="id"/>
-        <columnOverride column="login_name" property="loginName"/>
-        <columnOverride column="login_code" property="loginCode"/>
-        </table>
-        <table tableName="user_count">
+        <!--<table tableName="user">-->
+            <!--<columnOverride column="id" property="id"/>-->
+            <!--<columnOverride column="login_name" property="loginName"/>-->
+            <!--<columnOverride column="login_code" property="loginCode"/>-->
+        <!--</table>-->
+        <!--<table tableName="user_count">-->
+            <!--<columnOverride column="id" property="id"/>-->
+            <!--<columnOverride column="user_count" property="userCount"/>-->
+            <!--<columnOverride column="count_time" property="countTime"/>-->
+            <!--<columnOverride column="add_time" property="addTime"/>-->
+            <!--<columnOverride column="update_time" property="updateTime"/>-->
+        <!--</table>-->
+
+
+        <table tableName="price">
             <columnOverride column="id" property="id"/>
-            <columnOverride column="user_count" property="userCount"/>
-            <columnOverride column="count_time" property="countTime"/>
-            <columnOverride column="add_time" property="addTime"/>
+            <columnOverride column="total" property="total"/>
+            <columnOverride column="front" property="front"/>
+            <columnOverride column="end" property="end"/>
             <columnOverride column="update_time" property="updateTime"/>
+            <columnOverride column="add_time" property="addTime"/>
         </table>
 
 
