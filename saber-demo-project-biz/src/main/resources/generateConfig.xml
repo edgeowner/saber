@@ -5,7 +5,7 @@
 
 <generatorConfiguration>
 
-    <!--进入mybatis配置所在模块 ，重新配置table标签内容，执行 mybatis-generator:generate-->
+    <!--进入mybatis配置所在模块 ，重新配置table标签内容，执行 mvn mybatis-generator:generate-->
     <classPathEntry
             location="/Users/zhangsunny/.m2/repository/mysql/mysql-connector-java/5.1.38/mysql-connector-java-5.1.38.jar"/>
     <context id="tables" targetRuntime="MyBatis3">
@@ -52,13 +52,23 @@
         <!--</table>-->
 
 
-        <table tableName="price">
+        <!--<table tableName="price">-->
+            <!--<columnOverride column="id" property="id"/>-->
+            <!--<columnOverride column="total" property="total"/>-->
+            <!--<columnOverride column="front" property="front"/>-->
+            <!--<columnOverride column="end" property="end"/>-->
+            <!--<columnOverride column="update_time" property="updateTime"/>-->
+            <!--<columnOverride column="add_time" property="addTime"/>-->
+        <!--</table>-->
+
+        <table tableName="price_version">
             <columnOverride column="id" property="id"/>
             <columnOverride column="total" property="total"/>
             <columnOverride column="front" property="front"/>
             <columnOverride column="end" property="end"/>
             <columnOverride column="update_time" property="updateTime"/>
             <columnOverride column="add_time" property="addTime"/>
+            <columnOverride column="version" property="version"/>
         </table>
 
 
