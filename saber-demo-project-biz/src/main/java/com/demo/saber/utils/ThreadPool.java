@@ -84,8 +84,11 @@ public class ThreadPool {
     private synchronized static void init() {
         log.info("thread pool is init ");
         if (POOL == null) {
-            POOL = new ThreadPoolExecutor(INIT_SIZE, MAX_SIZE,
-                    IDEL_TIME, TimeUnit.MINUTES,
+            POOL = new ThreadPoolExecutor(
+                    INIT_SIZE,
+                    MAX_SIZE,
+                    IDEL_TIME,
+                    TimeUnit.MINUTES,
                     new ArrayBlockingQueue<Runnable>(MAX_QUEUE_SIZE, true),
                     new ThreadPoolExecutor.CallerRunsPolicy());
         }
