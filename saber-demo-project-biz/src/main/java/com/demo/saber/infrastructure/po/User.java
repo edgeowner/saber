@@ -1,5 +1,9 @@
 package com.demo.saber.infrastructure.po;
 
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
+
 public class User {
     private Integer id;
 

@@ -198,4 +198,19 @@
     select <include refid="Base_Column_List"/>
     from user
   </select>
+
+  <insert id="batchInsertUser" keyProperty="id" useGeneratedKeys="true" parameterType="com.demo.saber.infrastructure.po.User">
+     insert into `user` (
+        login_name,
+        login_code,
+        is_valid
+    ) values
+    <foreach collection="list" item="item" index="index" separator=",">
+      (
+       #{item.loginName,jdbcType=VARCHAR},
+       #{item.loginCode,jdbcType=VARCHAR},
+       #{item.isValid,jdbcType=INTEGER}
+      )
+    </foreach>
+  </insert>
 </mapper>

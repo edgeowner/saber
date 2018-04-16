@@ -30,4 +30,6 @@ public interface UserMapper {
 
 
     List<User> getAllUser();
+
+    int batchInsertUser(@Param("list") List<User> user);
 }

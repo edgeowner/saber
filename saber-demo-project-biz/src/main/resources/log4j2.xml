@@ -37,10 +37,10 @@
         <!--<Logger name="java.sql" level="debug" additivity="true">-->
             <!--<AppenderRef ref="Console"/>-->
         <!--</Logger>-->
-        <Logger name="com.demo.saber" level="trace" additivity="false">
+        <Logger name="com.demo.saber" level="INFO" additivity="false">
             <AppenderRef ref="Console"/>
         </Logger>
-        <Root level="trace">
+        <Root level="INFO">
             <AppenderRef ref="ERROR" />
             <AppenderRef ref="INFO" />
             <!--<AppenderRef ref="STDOUT" />-->
