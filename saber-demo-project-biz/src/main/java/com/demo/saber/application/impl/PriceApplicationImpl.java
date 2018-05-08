@@ -6,6 +6,7 @@ import com.demo.saber.mgt.dto.PriceDto;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * @author zhangsunny
@@ -19,8 +20,15 @@ public class PriceApplicationImpl implements PriceApplication {
     private PriceMgt priceMgt;
 
 
+
+//    @Transactional
     @Override
     public void updatePriceByDto(PriceDto priceDto) {
         priceMgt.updatePriceByDto(priceDto);
+    }
+
+    @Override
+    public void getPriceByKey(Integer key) {
+
     }
 }

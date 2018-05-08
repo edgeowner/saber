@@ -26,8 +26,8 @@ import java.util.Map;
 @RequestMapping("/price")
 public class PriceController {
 
-    @Autowired
-    private PriceApplication priceApplication;
+//    @Autowired
+//    private PriceApplication priceApplication;
 
     @Autowired
     private PriceMapper priceMapper;

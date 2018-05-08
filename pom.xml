@@ -343,6 +343,12 @@
         </dependency>
         <!--++++++quartz end+++++++-->
 
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>${aspectjrt-version}</version>
+        </dependency>
+
     </dependencies>
     <build>
         <finalName>saber-demo-project</finalName>
